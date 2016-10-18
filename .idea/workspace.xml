@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c90ad7a5-c238-496b-b689-1f3a56a20108" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ani_html/Blogo.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/3iFaIz0gBkKHPdKg8umUZhNB7KTvaRjC(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/7JEuM0qqObI97B5uTxbyZdEqkV46bwHR(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/8pTebHNeP5L3KQc4BoQsrt7JxINcICQx(2).gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/97lqB8RbRb66wWAJiHYIeNX06ZUtL1QT(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/Es2TrMeQiwDVp4XHJ7gQRl5NFKcPF7yK(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/HD6o3iIxMIo3zhXYJayssDIfjLFo1pBk(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/HQd1BsXoPLrn9Cr1nmDokMIATVDBjSZf(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/KOgZ97J21u6CeUumiJpIfxLx4vXuiBEr(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/U1NdNL5elaME9utlWcBRLQjzLjqEq1Wj(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/WHolL6hsaGTqayNWGAthq4G4J6g0C6e4(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/anigod(2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/fIDHuHZ93HpOczEgJ9xw60mDXT8r909W(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/fav(2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/jqO1qT4iV3gdYLofQplMlTP6youRvyKs(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/odA9sNLrE86(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/rw1u0EWrDSFhoPtbWMPNlkTJOdZNt61v(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/style(2).css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/szqcvrWDutiVw6BYwieSQQulS5lYAKNx(2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/ani_html/u8fDRZJ3Y4iOUmzlnTZWH40CiW74ts7m(2).jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/ani_html/style.css" afterPath="$PROJECT_DIR$/static/ani_html/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ani_page.html" afterPath="$PROJECT_DIR$/templates/ani_page.html" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +29,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/ani_html/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="113" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="841" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -106,7 +84,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1064" />
+    <option name="width" value="1292" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -468,14 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1476762623066</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="새롭게 시작">
+      <created>1476770833927</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1476770833927</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1064" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="1292" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27531958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2248996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -683,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/ani_html/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="113" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="841" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
           <folding />
         </state>
       </provider>
