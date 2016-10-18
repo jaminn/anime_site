@@ -5,8 +5,8 @@ from urllib import parse
 from get_anigod_video import  get_anigod_video
 
 app = Flask(__name__)
-#client = pymongo.MongoClient("mongodb://rnnwkals1:hi000319@ds041939.mlab.com:41939/ani_db")
-client = pymongo.MongoClient("mongodb://localhost:27017/ani_db")
+client = pymongo.MongoClient("mongodb://rnnwkals1:hi000319@ds041939.mlab.com:41939/ani_db")
+#client = pymongo.MongoClient("mongodb://localhost:27017/ani_db")
 db = client.ani_db
 
 
