@@ -45,14 +45,14 @@
             <tr itemscope="" itemtype="http://schema.org/TVEpisode">
                 <td>
                     <a class="table-image-container badge"
-                       href={{ ani["url"] }}
+                       href={{ url_for('video',query=ani["url"]|quote) }}
                     title={{ ani["name"] }}><img class="lazy table-image"
                                                  src={{ ani["sumnail"] }}
                     alt={{ ani["name"] }}
                     style="display: block;"></a>
                 </td>
                 <td><a class="table-link"
-                       href={{ ani["url"] }}>{{ani["name"]}}</a>
+                       href={{ url_for('video',query=ani["url"]|quote) }}> {{ani["name"]}}</a>
                 </td>
             </tr>
             {% endfor %}
