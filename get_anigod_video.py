@@ -6,11 +6,11 @@ import execjs
 def get_anigod_video(past_url):
     url = unquote(past_url)
     headers = {'referer': 'http://t.umblr.com/'}
-    text = requests.get(url, headers=headers).text
-    while not text:
-        text = requests.get(url, headers=headers).text
     patt = r"var videoID = ?'(.*?)';"
-    videoID = re.findall(patt, text)
+    videoID =[]
+    while not videoID:
+        text = requests.get(url, headers=headers).text
+        videoID = re.findall(patt, text)
     ID = execjs.eval('encodeURIComponent("' + videoID[0] + '")')
     return 'https://anigod.com/video?id=' + ID
     # return 'https://anigod.com/video?id='+quote(videoID[0],safe='')
