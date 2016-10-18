@@ -20,7 +20,7 @@ body {
 }
 
 a {
-    color: #ffc400;
+    color: #1166ff;
     text-decoration: none;
 }
 
@@ -51,10 +51,12 @@ h5 {}
 h6 {}
 
 header {
-    padding: 0 10px;
     height: 60px;
     background-color: #fff;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1.5px solid #dbdbdb;
+    border-color: #1166ff;
+    padding-left: 0px;
+    border-bottom-width: 2px;
 }
 
 header .header-container {
@@ -64,6 +66,7 @@ header .header-container {
 }
 
 header ul {
+    padding-left: 8%;
     height: 60px;
     position: relative;
     display: inline-block;
@@ -71,17 +74,18 @@ header ul {
 
 header li {
     height: 60px;
-    display: inline-block;
+    display: flex;
 }
 
 .logo {
-    display: inline-block;
+    display: block;
+    margin: auto 0;
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
+    width: 150px;
+    display: block;
+    -webkit-filter: drop-shadow(1px 3px 3px rgba(0,0,0,0.4));
 }
 
 @media (max-width: 260px) {
@@ -94,7 +98,7 @@ header li {
     width: 100%;
     margin: 0 auto;
     padding: 15px 0;
-    background-color: #fff;
+    background-color: #255fdb;
     position: absolute;
     display: block;
 }
@@ -103,8 +107,17 @@ header li {
     display: block;
 }
 
+@media (min-width: 640px) {
+    #search-input {
+    float: initial !important;
+    width: 250px !important;
+    margin: 0 auto !important;
+    }
+}
+
 #search-input {
-    margin: 0 calc((100% - 200px)/ 2);
+    margin-right: 10%;
+    float: right;
     width: 200px;
     padding: 5px 0;
     background-color: #fafafa;
@@ -196,12 +209,12 @@ header li {
 
 .index-table-container h2:hover,
 .index-table-container h2.selected {
-    color: #ffc400;
+    color: #1166ff;
 }
 
 .index-table-container h2:hover a,
 .index-table-container h2.selected a {
-    color: #ffc400;
+    color: #1166ff;
 }
 
 .index-table {
@@ -411,7 +424,7 @@ header li {
 }
 
 .table-link:hover {
-    color: #ffc400;
+    color: #1166ff;
 }
 
 .table-link:visited {
@@ -535,7 +548,7 @@ header li {
 }
 
 .cover h1 a:hover {
-    color: #ffc400;
+    color: #1166ff;
 }
 
 @media (min-width: 640px) {
@@ -779,9 +792,9 @@ header li {
 
 .paging a:hover,
 a.selected {
-    background-color: #ffc400;
+    background-color: #1166ff;
     color: #fff;
-    border: 1px solid #ffc400;
+    border: 1px solid #1166ff;
 }
 
 .article {
@@ -819,7 +832,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffc400;
+    color: #1166ff;
 }
 
 footer p {
