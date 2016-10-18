@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{{ info_name }}</title>
+    <link type="text/css" rel="stylesheet" href="/static/ani_html/style.css">
+</head>
+
+<body>
+<header>
+    <div class="header-container">
+        <div class="search-container">
+            <form onsubmit="return search();">
+                <input id="search-input" type="text" placeholder="애니메이션 검색" value="">
+                <input type="submit" style="display: none;"></form>
+        </div>
+        <ul>
+            <li>
+                <a class="logo" href="https://anigod.com/" title="애니갓"><img src="/static/ani_html/anigod.png"
+                                                                            alt="애니갓"></a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="cover"><img class="cover-background" src={{ anis["info"]["sumnail"] }}>
+    <img class="cover-profile" src={{ anis["info"]["sumnail"] }}>
+    <h1>
+        <a href="https://anigod.com/animation/%eb%ac%b4%ec%b1%84%ed%95%9c%ec%9d%98-%ed%8c%ac%ed%85%80-%ec%9b%94%eb%93%9c-15">{{
+            anis["info"]["name"] }}</a></h1></div>
+<div class="container">
+    <div class="table-container" itemscope="" itemtype="http://schema.org/TVSeries">
+        <table class="table">
+            <thead style="display: none;">
+            <tr>
+                <th>이미지</th>
+                <th>제목</th>
+                <th>날짜</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ani in anis["list"][(24*(num-1)):(24*num)] %}
+            <tr itemscope="" itemtype="http://schema.org/TVEpisode">
+                <td>
+                    <a class="table-image-container badge"
+                       href={{ ani["url"] }}
+                    title={{ ani["name"] }}><img class="lazy table-image"
+                                                 src={{ ani["sumnail"] }}
+                    alt={{ ani["name"] }}
+                    style="display: block;"></a>
+                </td>
+                <td><a class="table-link"
+                       href={{ ani["url"] }}>{{ani["name"]}}</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="paging">
+        <ul>
+            {% if num > 10%}
+            <li><a href={{ url_for('move_page', query=query,num=(( ((num-1)//10)-1) *10)+1 ) }}>이전</a></li>
+            {% endif %}
+
+            {% for i in range(1,11) %}
+            {% if anis["list"]|length > 24*(i-1+((num-1)//10)*10) %}
+            <li><a href={{ url_for('move_page', query=query,num=( (num-1) //10)*10+i) }} class={{ select(num,i) }}>{{ i }}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% if anis["list"]|length > 24*((((num-1)//10)*10)+10) %}
+            <li><a href={{ url_for('move_page', query=query,num=(( ((num-1)//10)+1) *10)+1 ) }}>다음</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <p><a href="https://anigod.com/about" title="소개">소개</a> <a href="https://anigod.com/faq" title="자주하는 질문">자주하는
+            질문</a> <a href="https://anigod.com/contact" title="연락처">연락처</a> <a href="https://twitter.com/anigodcom/"
+                                                                               title="트위터">트위터</a> <a
+                href="https://www.facebook.com/anigod/" title="페이스북">페이스북</a></p>
+        <p>© 2016 애니갓</p>
+    </div>
+</footer>
+</body>
+
+</html>
