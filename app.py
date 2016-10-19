@@ -1,10 +1,9 @@
 import pymongo
 import os
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for ,redirect
 from urllib import parse
 from get_anigod_video import get_anigod_video
 from flask_cors import CORS, cross_origin
-from flask import g
 
 app = Flask(__name__)
 client = pymongo.MongoClient("mongodb://rnnwkals1:hi000319@ds041939.mlab.com:41939/ani_db")
@@ -12,24 +11,6 @@ client = pymongo.MongoClient("mongodb://rnnwkals1:hi000319@ds041939.mlab.com:419
 db = client.ani_db
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-hdr = {
-    'User-Agent': 'Mozilla/5.0',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
-    'Accept-Encoding': 'none',
-    'Accept-Language': 'en-US,en;q=0.8',
-    'Connection': 'keep-alive',
-    'Upgrade-Insecure-Requests':'1',
-    'Host':'anigod.com',
-    'referer': 'http://t.umblr.com/'}
-
-
-def after_this_request(func):
-    if not hasattr(g, 'call_after_request'):
-        g.call_after_request = []
-    g.call_after_request.append(func)
-    return func
-
 
 @app.context_processor
 def select():
@@ -38,13 +19,6 @@ def select():
 
     return dict(select=_select)
 
-
-#
-# @app.context_processor
-# def quote():
-#     def _quote(uri):
-#         return parse.quote(uri, safe='')
-#     return dict(quote=_quote)
 @app.template_filter(name="quote")
 def quote(uri):
     return parse.quote(uri, safe='')
@@ -67,13 +41,9 @@ def hello():
 
 @app.route('/video/<query>')
 def video(query):
-    @after_this_request
-    def set_header(response):
-        response.headers = hdr
-        return response
 
     # return '<video controls><source type="video/mp4" src="%s"></video>' % get_anigod_video(query)
-    return get_anigod_video(query)
+    return redirect(get_anigod_video(query))
 
 
 @app.route('/<query>')
@@ -92,7 +62,6 @@ def move_page(query, num):
         return render_template("ani_page.html", query=query, anis=anis, num=num)
     else:
         return "404"
-
 
 if __name__ == '__main__':
     app.debug = True
