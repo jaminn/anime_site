@@ -3,6 +3,8 @@ import urllib.request
 from urllib.parse import quote, unquote
 from bs4 import BeautifulSoup
 import execjs
+from flask import g
+
 
 
 def get_anigod_video(past_url):
