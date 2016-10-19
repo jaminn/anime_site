@@ -18,14 +18,18 @@ def get_anigod_video(past_url):
         'Connection': 'keep-alive',
         'referer': 'http://t.umblr.com/'}
     videoID = []
-    req = urllib.request.Request(url, headers=hdr)
-    data = urllib.request.urlopen(req)
-    soup = BeautifulSoup(data)
-    text = soup.get_text()
-    videoID = re.findall(patt, text)
-    ID = execjs.eval('encodeURIComponent("' + videoID[0] + '")')
-    return 'https://anigod.com/video?id=' + ID
+    web = urllib.request.urlopen('http://www.naver.com')
+    content = web.read().decode(web.headers.get_content_charset())
+    # req = urllib.request.Request(url, headers=hdr)
+    # data = urllib.request.urlopen(req)
+    # soup = BeautifulSoup(data)
+    # text = soup.get_text()
+    # videoID = re.findall(patt, text)
+    # ID = execjs.eval('encodeURIComponent("' + videoID[0] + '")')
+    # return 'https://anigod.com/video?id=' + ID
     # return 'https://anigod.com/video?id='+quote(videoID[0],safe='')
+    return str(hdr) + str(content)
+
 
 
 if __name__ == "__main__":

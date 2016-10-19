@@ -42,8 +42,8 @@ def hello():
 
 @app.route('/video/<query>')
 def video(query):
-    return '<video controls><source type="video/mp4" src="%s"></video>' % get_anigod_video(query)
-
+    #return '<video controls><source type="video/mp4" src="%s"></video>' % get_anigod_video(query)
+    return get_anigod_video(query)
 
 @app.route('/<query>')
 def index(query):
