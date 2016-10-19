@@ -18,7 +18,9 @@ def get_anigod_video(past_url):
         'Connection': 'keep-alive',
         'referer': 'http://t.umblr.com/'}
     videoID = []
-    web = urllib.request.urlopen('http://www.naver.com')
+    url = 'https://anigod.com/episode/%EB%B0%94%EB%82%98%EB%83%90-13%ED%99%94-28708'
+    req = urllib.request.Request(url, headers=hdr)
+    web = urllib.request.urlopen(req)
     content = web.read().decode(web.headers.get_content_charset())
     # req = urllib.request.Request(url, headers=hdr)
     # data = urllib.request.urlopen(req)
