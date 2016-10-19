@@ -18,6 +18,8 @@ def get_anigod_video(past_url):
         'Accept-Encoding': 'none',
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Host': 'anigod.com',
         'referer': 'http://t.umblr.com/'}
     videoID = []
     text = requests.get(url, headers=hdr).content

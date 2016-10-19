@@ -19,6 +19,8 @@ hdr = {
     'Accept-Encoding': 'none',
     'Accept-Language': 'en-US,en;q=0.8',
     'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests':'1',
+    'Host':'anigod.com',
     'referer': 'http://t.umblr.com/'}
 
 
