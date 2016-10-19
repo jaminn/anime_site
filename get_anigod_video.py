@@ -18,10 +18,10 @@ def get_anigod_video(past_url):
         'Connection': 'keep-alive',
         'referer': 'http://t.umblr.com/'}
     videoID = []
-    url = 'https://anigod.com/episode/%EB%B0%94%EB%82%98%EB%83%90-13%ED%99%94-28708'
-    req = urllib.request.Request(url, headers=hdr)
-    web = urllib.request.urlopen(req)
-    content = web.read().decode(web.headers.get_content_charset())
+    text = requests.get(url, headers=hdr).content
+    # req = urllib.request.Request(url, headers=hdr)
+    # web = urllib.request.urlopen(req)
+    # content = web.read().decode(web.headers.get_content_charset())
     # req = urllib.request.Request(url, headers=hdr)
     # data = urllib.request.urlopen(req)
     # soup = BeautifulSoup(data)
@@ -30,10 +30,9 @@ def get_anigod_video(past_url):
     # ID = execjs.eval('encodeURIComponent("' + videoID[0] + '")')
     # return 'https://anigod.com/video?id=' + ID
     # return 'https://anigod.com/video?id='+quote(videoID[0],safe='')
-    return str(hdr) + str(content)
-
+    return str(hdr) + str(text)
 
 
 if __name__ == "__main__":
     url = "https://anigod.com/episode/%EB%B0%94%EB%82%98%EB%83%90-4%ED%99%94-23940"
-    print(get_anigod_video(quote(url,safe='')))
+    print(get_anigod_video(quote(url, safe='')))
