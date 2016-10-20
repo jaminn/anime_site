@@ -13,9 +13,10 @@
 <header>
     <div class="header-container">
         <div class="search-container">
-            <form onsubmit="return search();">
-                <input id="search-input" type="text" placeholder="애니메이션 검색" value="">
-                <input type="submit" style="display: none;"></form>
+            <form action="/video" method="GET">
+                <input name="input" id="search-input" type="text" placeholder="애니메이션 검색" value="">
+                <input type="submit" style="display: none;">
+            </form>
         </div>
         <ul>
             <li>
@@ -45,14 +46,14 @@
             <tr itemscope="" itemtype="http://schema.org/TVEpisode">
                 <td>
                     <a class="table-image-container badge"
-                       href={{ url_for('video',query=ani["url"]|quote) }}
+                       href={{ url_for('video_num',query=ani["url"]|quote) }}
                     title={{ ani["name"] }}><img class="lazy table-image"
                                                  src={{ ani["sumnail"] }}
                     alt={{ ani["name"] }}
                     style="display: block;"></a>
                 </td>
                 <td><a class="table-link"
-                       href={{ url_for('video',query=ani["url"]|quote) }}> {{ani["name"]}}</a>
+                       href={{ url_for('video_num',query=ani["url"]|quote) }}> {{ani["name"]}}</a>
                 </td>
             </tr>
             {% endfor %}
