@@ -2,7 +2,7 @@ import pymongo
 import os
 from flask import Flask, render_template, url_for, redirect
 from urllib import parse
-
+import re
 from flask import request
 import requests
 
@@ -87,7 +87,8 @@ def test():
         'referer': 'http://t.umblr.com/'
     }
     req = requests.get(url, headers=headers)
-    return str(req.request) + " :" + str(req.text)
+    data =req.text.replace('/cdn-cgi','https://anigod.com/cdn-cgi/')
+    return str(req.status_code) + " :"+ str(req.headers) + str(req.text)
 
 
 if __name__ == '__main__':
