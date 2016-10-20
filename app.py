@@ -1,4 +1,5 @@
 import pymongo
+import httplib2
 import os
 from flask import Flask, render_template, url_for, redirect
 from urllib import parse
@@ -86,9 +87,9 @@ def test():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.59 Safari/537.36",
         'referer': 'http://t.umblr.com/'
     }
-    req = requests.get(url, headers=headers)
-    data =req.text.replace('/cdn-cgi','https://anigod.com/cdn-cgi/')
-    return str(req.status_code) + " :"+ str(req.headers) + str(req.text)
+    h = httplib2.Http()
+    (resp, content) = h.request(url, headers=headers)
+    return str(resp) + " :" + str(content)
 
 
 if __name__ == '__main__':
